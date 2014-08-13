@@ -1,0 +1,19 @@
+Source: amethyst
+Maintainer: Dean Serneevy <dean@serenevy.net>
+Section: x11
+Priority: optional
+Build-Depends: python2.7-dev, debhelper (>= 7.4.3)
+Standards-Version: 3.9.1
+X-Python-Version: >= 2.7
+
+Package: python-amethyst
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}, python-six
+Suggests: python-numpy, python-passlib, python-scientific, python-scipy, python-sqlalchemy, python-wxtools, python-wxmpl, python-objectlistview
+Description: Base library for building wxPython applications
+ This is a set of utilities, widgets, and base classes used by
+ APCI, LLC and CMM, Inc. in the development of their software.
+ At this point, Its primary interest to others will be as a
+ source of examples and inspiration as the code is young (thus
+ incompatible changes are likely) and can have specific
+ expectations in places (we're working on those).

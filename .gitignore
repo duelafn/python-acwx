@@ -1,0 +1,36 @@
+## Roughly ordered by decreasing risk
+
+# Python Ignores
+/pydoc
+/MANIFEST
+*.py[cod]
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+sdist
+develop-eggs
+.installed.cfg
+__pycache__
+pip-log.txt
+.coverage
+.tox
+nosetests.xml
+
+
+# LaTeX ignores
+*.aux
+*.dvi
+*.log
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.toc
+*.lab
+*.six
+*.nav
+*.snm

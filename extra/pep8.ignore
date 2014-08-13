@@ -1,0 +1,13 @@
+
+E401 multiple imports on one line    # I like "import sys, os"
+E501 line too long
+
+# Complains about extra spaces (usually used for aligment)
+E201 whitespace after '['
+E202 whitespace before ']'
+E221 multiple spaces before operator
+E222 multiple spaces after operator
+E241 multiple spaces after ','
+E251 no spaces around keyword / parameter equals
+E271 multiple spaces after keyword
+E272 multiple spaces before keyword
