@@ -15,9 +15,39 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 from __future__ import division, absolute_import, print_function, unicode_literals
-__all__ = 'cached_property'.split()
+__all__ = 'ContextualCounter cached_property'.split()
 
 import weakref
+
+
+
+class ContextualCounter(object):
+    """Provides a contextual flag.
+
+    Useful to prevent (or count) nesting. Example use:
+
+        flag = ContextualCounter()
+        def my_func():
+            print("my_func, depth", flag.depth)
+            if flag:
+                return
+            with flag:
+                do_stuff()
+
+    Now if my_func is called from do_stuff, you will not enter an infinite
+    recursion.
+    """
+    def __init__(self):
+        self.depth = 0
+    def __enter__(self):
+        self.depth += 1
+    def __exit__(self, type, value, traceback):
+        self.depth -= 1
+
+    def __nonzero__(self):
+        return self.depth > 0
+    def __int__(self):
+        return self.depth
 
 
 class cached_property(object):
