@@ -1,4 +1,10 @@
 
+amethyst (0.2.0~pre-1) unstable; urgency=low
+
+  development release
+
+ -- Dean Serenevy <dean@serenevy.net>  Thu, 14 Aug 2014 13:25:54 -0400
+
 amethyst (0.1.0-1) unstable; urgency=low
 
   * Initial package creation
