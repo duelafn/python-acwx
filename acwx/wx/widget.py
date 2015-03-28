@@ -314,9 +314,6 @@ class GridWidget(Widget):
             self._sizer_row_names[name] = row
             self._row_visibility[name]  = True
 
-        if kwargs.get("grow", False):
-            self.sizer.AddGrowableRow(row)
-
         col, idx = 0, 0
         for item in items:
             this_span = span[min(idx,len(span)-1)]
@@ -342,6 +339,9 @@ class GridWidget(Widget):
             self.sizer.Add(item, pos=(row, col), span=(this_row_span, this_col_span), flag=this_flag, border=border)
             col += this_col_span
             idx += 1
+
+        if kwargs.get("grow", False):
+            self.sizer.AddGrowableRow(row)
 
     def row_num(self, name):
         return self._sizer_row_names.get(name, name)
