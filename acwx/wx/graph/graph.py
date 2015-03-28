@@ -17,8 +17,8 @@
 from __future__ import division, absolute_import, print_function, unicode_literals
 __all__ = 'RealtimeGraph'.split()
 
-from amethyst.util import cached_property
-from amethyst.wx   import subwidget, widget, Widget
+from acwx.util import cached_property
+from acwx.wx   import subwidget, widget, Widget
 from .series  import Series
 
 import wx, sys

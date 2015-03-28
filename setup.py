@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Amethyst wx-App Library"""
+"""acwx wx-App Library"""
 # This software is Copyright (c) 2013 APCI, LLC.
 #
 # This program is free software: you can redistribute it and/or modify it
@@ -15,7 +15,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import re, os.path
-__version__ = re.search(r'(?m)^__version__\s*=\s*"([\d.]+(?:[\-\+~.]\w+)*)"', open('amethyst/__init__.py').read()).group(1)
+__version__ = re.search(r'(?m)^__version__\s*=\s*"([\d.]+(?:[\-\+~.]\w+)*)"', open('acwx/__init__.py').read()).group(1)
 
 from distutils.core import setup
 from os import walk
@@ -37,14 +37,14 @@ def find_packages(path):
     return val
 
 setup(
-    name         = 'amethyst',
+    name         = 'acwx',
     version      = __version__,
-    url          = 'https://github.com/duelafn/python-amethyst',
+    url          = 'https://github.com/duelafn/python-acwx',
     author       = "Dean Serenevy",
     author_email = 'dean@serenevy.net',
-    description  = "Amethyst wx-App Library",
-    packages     = find_packages("amethyst"),
-    provides     = "amethyst",
+    description  = "acwx wx-App Library",
+    packages     = find_packages("acwx"),
+    provides     = "acwx",
     requires     = [# Only strict requirements
         "six",
     ],

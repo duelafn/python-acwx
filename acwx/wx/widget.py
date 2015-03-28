@@ -19,9 +19,9 @@ from __future__ import division, absolute_import, print_function, unicode_litera
 __all__ = 'widget subwidget WidgetMixin Widget Dialog GridWidget ScrolledWidget'.split()
 
 import wx, weakref, wx.lib.scrolledpanel, json, six
-from amethyst import cached_property
+from acwx import cached_property
 from .util import BORDER_SIZE
-import amethyst.wx.util
+import acwx.wx.util
 
 class widget(cached_property):
     pass
@@ -79,10 +79,10 @@ class WidgetMixin(object):
         return wx.StaticText(self, wx.ID_ANY, unicode(text), **kwargs)
 
     def file_save_dialog(self, title, wildcard, filename):
-        return amethyst.wx.util.file_save_dialog(self, title, wildcard, filename)
+        return acwx.wx.util.file_save_dialog(self, title, wildcard, filename)
 
     def file_open_dialog(self, title, wildcard):
-        return amethyst.wx.util.file_open_dialog(self, title, wildcard)
+        return acwx.wx.util.file_open_dialog(self, title, wildcard)
 
     def show_error(self, *args, **kwargs):
         kwargs.setdefault('parent', self)

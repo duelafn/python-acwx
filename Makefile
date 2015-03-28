@@ -12,8 +12,8 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-PKGNAME = amethyst
-PKG_VERSION = $(shell perl -ne 'print $$1 if /^__version__\s*=\s*"([\d.]+(?:[\-\+~.]\w+)*)"/' amethyst/__init__.py)
+PKGNAME = acwx
+PKG_VERSION = $(shell perl -ne 'print $$1 if /^__version__\s*=\s*"([\d.]+(?:[\-\+~.]\w+)*)"/' acwx/__init__.py)
 
 
 .PHONY: all zip sdist dist debbuild clean test

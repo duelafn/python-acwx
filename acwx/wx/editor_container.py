@@ -65,9 +65,9 @@ from __future__ import division, absolute_import, print_function, unicode_litera
 __all__ = 'EditorContainerOLV'.split()
 
 import wx
-from amethyst.wx.widget import Widget, widget, subwidget
-from amethyst.wx.util   import BORDER_SIZE, NULL_FIELD
-from amethyst.util      import ContextualCounter
+from acwx.wx.widget import Widget, widget, subwidget
+from acwx.wx.util   import BORDER_SIZE, NULL_FIELD
+from acwx.util      import ContextualCounter
 
 from ObjectListView  import FastObjectListView
 

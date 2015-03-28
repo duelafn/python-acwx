@@ -2,5 +2,5 @@
 set -e
 
 if which pycompile >/dev/null 2>&1; then
-    pycompile -p python-amethyst
+    pycompile -p python-acwx
 fi
