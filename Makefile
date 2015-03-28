@@ -28,7 +28,7 @@ sdist: test
 	python setup.py sdist
 
 dist: test debbuild
-	mv -f debbuild/${PKGNAME}_* debbuild/python-${PKGNAME}_* dist/
+	mv -f debbuild/${PKGNAME}_* debbuild/*.deb dist/
 	rm -rf debbuild
 
 debbuild: sdist
@@ -38,7 +38,7 @@ debbuild: sdist
 	mv -f dist/${PKGNAME}-${PKG_VERSION}.tar.gz debbuild/${PKGNAME}_${PKG_VERSION}.orig.tar.gz
 	cd debbuild && tar -xzf ${PKGNAME}_${PKG_VERSION}.orig.tar.gz
 	cp -r debian debbuild/${PKGNAME}-${PKG_VERSION}/
-	cd debbuild/${PKGNAME}-${PKG_VERSION} && dpkg-buildpackage -rfakeroot -uc -us -tc -i
+	cd debbuild/${PKGNAME}-${PKG_VERSION} && dpkg-buildpackage -rfakeroot -uc -us
 
 test:
 	unit2 discover -s test
